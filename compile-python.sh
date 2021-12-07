@@ -1,3 +1,5 @@
+#!/bin/bash
+
 venv()
 {
     # Usage:
@@ -11,7 +13,7 @@ venv()
     deactivate 2>/dev/null
     if ! [[ -d .venv ]]
     then
-        python$1 -m venv --prompt "$(basename "$PWD"))(py$(python$1 --version | cut -d' ' -f2)" .venv
+        "python$1" -m venv --prompt "$(basename "$PWD"))(py$("python$1" --version | cut -d' ' -f2)" .venv
     fi
     source .venv/bin/activate
 }
@@ -35,12 +37,12 @@ compile-python()
     fi
     local URL="https://www.python.org/ftp/python"
     (
-        cd /tmp
-        wget -qO- $URL/$PY_VERSION/Python-$PY_VERSION$BETA.tgz | tar -xzf - || (
+        cd /tmp || return 1
+        wget -qO- "$URL/$PY_VERSION/Python-$PY_VERSION$BETA.tgz" | tar -xzf - || (
             echo "Version not found, check on $URL."
         )
-        [ -d Python-$PY_VERSION$BETA ] && (cd Python-$PY_VERSION$BETA; ./configure $FLAGS --prefix=$HOME/.local/ && make -j $(nproc) && make altinstall) &&
-            rm -r Python-$PY_VERSION$BETA
+        [ -d "Python-$PY_VERSION$BETA" ] && (cd "Python-$PY_VERSION$BETA"; ./configure $FLAGS --prefix="$HOME/.local/" && make -j "$(nproc)" && make altinstall) &&
+            rm -r "Python-$PY_VERSION$BETA"
     )
 }
 
