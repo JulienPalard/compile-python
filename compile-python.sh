@@ -53,9 +53,9 @@ compile-pythons()
     compile-python 3.6.15 &
     compile-python 3.7.12 &
     compile-python 3.8.12 &
-    compile-python 3.9.9 &
-    compile-python 3.10.1 &
-    compile-python 3.11.0 a3 &
+    compile-python 3.9.10 &
+    compile-python 3.10.2 &
+    compile-python 3.11.0 a4 &
     wait
 }
 
