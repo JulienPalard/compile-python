@@ -51,10 +51,10 @@ compile-pythons()
     # Compiles a usefull set of Python versions.
     compile-python 3.5.10 &
     compile-python 3.6.15 &
-    compile-python 3.7.12 &
-    compile-python 3.8.12 &
-    compile-python 3.9.10 &
-    compile-python 3.10.2 &
+    compile-python 3.7.13 &
+    compile-python 3.8.13 &
+    compile-python 3.9.11 &
+    compile-python 3.10.3 &
     compile-python 3.11.0 a6 &
     wait
 }
