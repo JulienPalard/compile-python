@@ -49,8 +49,6 @@ compile-python()
 compile-pythons()
 {
     # Compiles a usefull set of Python versions.
-    compile-python 3.5.10 &
-    compile-python 3.6.15 &
     compile-python 3.7.13 &
     compile-python 3.8.13 &
     compile-python 3.9.11 &
