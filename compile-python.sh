@@ -52,7 +52,7 @@ compile-pythons()
     compile-python 3.7.13 &
     compile-python 3.8.13 &
     compile-python 3.9.13 &
-    compile-python 3.10.5 &
+    compile-python 3.10.6 &
     compile-python 3.11.0 rc1 &
     wait
 }
