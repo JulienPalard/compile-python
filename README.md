@@ -14,14 +14,18 @@ xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
 ```
 
 
-## Usage
+## Installation
 
 Clone the repo anywhere, then in your `~/.bashrc` add:
 
     source PATH/To/THE/REPO/compile-python.sh
 
+And for the compiled Python to be found in your PATH:
 
-TL;DR:
+    PATH="$PATH:$HOME/.local/bin"
+
+
+## Usage
 
 ```bash
 $ compile-pythons

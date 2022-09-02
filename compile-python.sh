@@ -62,5 +62,3 @@ _compile_python()
     COMPREPLY=( $( compgen -W '$( command curl -s https://www.python.org/ftp/python/  | grep -o ">[0-9.]\+/<" | sed "s/^>//;s|/<$||" )' -- "${COMP_WORDS[COMP_CWORD]}") )
 }
 complete -F _compile_python compile-python
-
-PATH="$PATH:$HOME/.local/bin"
