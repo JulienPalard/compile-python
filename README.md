@@ -61,7 +61,10 @@ Anyway it's ~67 lines of code, maybe just read it.
 `python3.8`), so `python3` and `python` will always point to your
 distrib' Python.
 
-Don't hesitate to `apt install python-is-python3` if you want `python`
+But beware, depending on how you setup your `PATH`, `pythonY.X` may
+point to your distrib' Python, or to your manually compiled one.
+
+On Debian, don't hesitate to `apt install python-is-python3` if you want `python`
 to be `python3`.
 
 
