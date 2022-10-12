@@ -49,10 +49,10 @@ compile-python()
 compile-pythons()
 {
     # Compiles a usefull set of Python versions.
-    compile-python 3.7.14 &
-    compile-python 3.8.14 &
-    compile-python 3.9.14 &
-    compile-python 3.10.7 &
+    compile-python 3.7.15 &
+    compile-python 3.8.15 &
+    compile-python 3.9.15 &
+    compile-python 3.10.8 &
     compile-python 3.11.0 rc2 &
     wait
 }
