@@ -53,7 +53,8 @@ compile-pythons()
     compile-python 3.8.15 &
     compile-python 3.9.15 &
     compile-python 3.10.8 &
-    compile-python 3.11.0 rc2 &
+    compile-python 3.11.0 &
+    compile-python 3.12.0 a1 &
     wait
 }
 
